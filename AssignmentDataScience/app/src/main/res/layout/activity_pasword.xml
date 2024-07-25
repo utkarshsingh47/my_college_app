@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/dusky"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/teaching_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/signup"
+        android:layout_marginLeft="90px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Sign in"
+        android:textSize="80px"
+        android:layout_marginTop="70px"
+
+        android:fontFamily="monospace"
+        app:layout_constraintTop_toBottomOf="@id/teaching_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/scolbar"
+        app:layout_constraintTop_toBottomOf="@+id/txt_signin"
+        tools:ignore="MissingConstraints">
+
+        <!-- Step 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/step1_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/orange"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20px"
+            android:background="@color/orange"/>
+
+        <!-- Step 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/step2_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/orange"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20px"
+            android:background="@color/orange"/>
+
+        <!-- Step 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/step3_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textColor="@color/orange"/>
+        </LinearLayout>
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20px"
+            android:background="@color/orange"/>
+        <!-- Step 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/step4_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Key"
+                android:textColor="@color/orange"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@id/scolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:textSize="40px"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10px" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_hint_password"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="60px"
+            android:textColorHint="@color/whitish"
+            android:textColor="@color/black"
+            android:hint="Enter Your Password"
+            android:padding="20px"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rollno"
+            android:textSize="40px"
+            android:text="Confirm Password"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10px" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_hint_confirm_password"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="60px"
+            android:textColorHint="@color/whitish"
+            android:textColor="@color/black"
+            android:hint="Enter Your Confirm Password"
+            android:padding="20px"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp" >
+
+        </EditText>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="80px"
+        android:text="Next"
+        app:layout_constraintBottom_toTopOf="@+id/txttxt"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF7F50"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/txttxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="80px"
+        >
+        <!--   app:layout_constraintTop_toBottomOf="@id/section"
+              android:layout_marginTop="300px"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="No account? " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:id="@+id/register"
+            android:textColor="#FF7F50"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
